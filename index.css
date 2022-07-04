@@ -1,0 +1,272 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  user-select: none;
+}
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: rgb(53, 72, 77);
+  background: linear-gradient(90deg, rgba(53, 72, 77, 1) 0%, rgba(24, 34, 39, 1) 100%);
+}
+.world {
+  overflow: hidden;
+  position: relative;
+}
+.score {
+  position: absolute;
+  font-size: 6vmin;
+  right: 47vmin;
+  top: 9vmin;
+  color: #21abff;
+  z-index: 10;
+  font-family: cursive;
+}
+.start-screen {
+  position: absolute;
+  font-size: 5vmin;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-family: cursive;
+}
+.hide {
+  display: none;
+}
+.ground {
+  --left: 0;
+  position: absolute;
+  /* width: 18%; */
+  width: 300%;
+  bottom: 0;
+  left: calc(var(--left) * 1%)
+}
+.sky {
+  --left: 0;
+  width: 7%;
+  position: absolute;
+  animation-name: floating;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+}
+@keyframes floating {
+  from {
+    transform: translate(7px, 2px);
+  }
+  65% {
+    transform: translate(3px, 18px);
+  }
+  to {
+    transform: translate(10px, 26px);
+  }
+}
+.sky2 {
+  --left: 0;
+  width: 7%;
+  position: absolute;
+  left: 29%;
+  top: 15%;
+  animation-name: floating;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+}
+@keyframes floating {
+  from {
+    transform: translate(7px, 2px);
+  }
+  65% {
+    transform: translate(3px, 18px);
+  }
+  to {
+    transform: translate(10px, 26px);
+  }
+}
+.sky3 {
+  --left: 0;
+  width: 7%;
+  position: absolute;
+  left: 56%;
+  animation-name: floating;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+}
+@keyframes floating {
+  from {
+    transform: translate(7px, 2px);
+  }
+  65% {
+    transform: translate(3px, 18px);
+  }
+  to {
+    transform: translate(10px, 26px);
+  }
+}
+.sky4 {
+  --left: 0;
+  width: 7%;
+  position: absolute;
+  left: 88%;
+  animation-name: floating;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+}
+@keyframes floating {
+  from {
+    transform: translate(7px, 2px);
+  }
+  65% {
+    transform: translate(3px, 18px);
+  }
+  to {
+    transform: translate(10px, 26px);
+  }
+}
+.dino {
+  --bottom: 0;
+  position: absolute;
+  left: 1%;
+  height: 16%;
+  bottom: calc(var(--bottom) * 1%);
+}
+.cactus {
+  position: absolute;
+  left: calc(var(--left) * 1%);
+  height: 16%;
+  bottom: 0;
+}
+/* body{background: linear-gradient(to top, #283E51, #0A2342);height:100vh;width:100%} */
+.pice {
+  background: white;
+  height: 9px;
+  width: 8px;
+  border-radius: 5px 5px 5px 0;
+  animation: fly 6s infinite linear;
+  position: absolute;
+  z-index: 9;
+}
+.c {
+  margin-left: 20%;
+  margin-top: -10px;
+}
+.d {
+  margin-left: 40%;
+  margin-top: 30px;
+}
+.e {
+  margin-left: 50%;
+}
+.f {
+  margin-left: 60%;
+}
+.g {
+  margin-left: 80%;
+  margin-top: 30px;
+}
+.h {
+  margin-left: 100%;
+  margin-top: -10px;
+}
+@keyframes fly {
+  0% {
+    height: 5px;
+    width: 6px;
+    margin-top: 0px;
+  }
+  25% {
+    margin-left: 40px;
+  }
+  50% {
+    margin-left: -40px;
+  }
+  75% {
+    margin-left: 40px;
+  }
+  100% {
+    height: 0px;
+    width: 1px;
+    margin-top: 600px;
+  }
+}
+.pice1 {
+  background: white;
+  height: 9px;
+  width: 8px;
+  border-radius: 5px 5px 5px 0;
+  animation: flya 6s infinite linear;
+  position: absolute;
+  z-index: 9;
+}
+@keyframes flya {
+  0% {
+    height: 6px;
+    width: 4px;
+    margin-top: 0px;
+  }
+  25% {
+    margin-left: 10px;
+  }
+  50% {
+    margin-left: -0px;
+  }
+  75% {
+    margin-left: 2px;
+  }
+  100% {
+    height: 0px;
+    width: 1px;
+    margin-top: 500px;
+  }
+}
+.pice2 {
+  background: white;
+  height: 9px;
+  width: 8px;
+  border-radius: 5px 5px 5px 0;
+  animation: flyc 3s infinite linear;
+  position: absolute;
+  z-index: 9;
+}
+@keyframes flyc {
+  0% {
+    height: 5px;
+    width: 4px;
+    margin-top: 0px;
+  }
+  25% {
+    margin-left: 30px;
+  }
+  50% {
+    margin-left: -20px;
+    margin-top: 100px;
+  }
+  75% {
+    margin-left: 2px;
+  }
+  100% {
+    height: 0px;
+    width: 1px;
+    margin-top: 40vh;
+  }
+}
+.delay1 {
+  animation-delay: 0.1s;
+}
+.delay2 {
+  animation-delay: 0.4s;
+}
+.delay3 {
+  animation-delay: 0.6s;
+}
